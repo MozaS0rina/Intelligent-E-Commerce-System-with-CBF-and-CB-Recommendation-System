@@ -53,3 +53,18 @@ Each user must manually create these scenarios in the Recombee Dashboard.
 * **Implementation:**
   ```php
   new RecommendItemsToUser($userId, $k, ['scenario' => 'home_page']);
+
+#### **2. product_detail**
+* **Algorithm type:**  Collaborative Filtering (CF)
+* **Placement (page):** Cart page
+* **Implementation:**
+  ```php
+  new RecommendItemsToItem($itemId, $userId, $k, ['scenario' => 'product_detail']);
+
+#### **3. cart**
+* **Algorithm type:** Content‑Based Filtering (CBF)
+* **Placement (page):** Product page
+* **Implementation:**
+  ```php
+  new RecommendItemsToUser($userId, $k, ['scenario' => 'cart']);
+
